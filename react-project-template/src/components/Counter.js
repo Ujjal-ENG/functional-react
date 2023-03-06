@@ -3,12 +3,8 @@ import React, { useState } from 'react';
 const Counter = () => {
     const [count, setCount] = useState(0);
 
-    let i = 0;
     const addFive = () => {
-        while (i < 5) {
-            setCount((ps) => ps + 1);
-            i += 1;
-        }
+        setCount((ps) => ps + 5);
     };
     return (
         <div>
