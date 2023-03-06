@@ -1,4 +1,4 @@
-import React, { useState, useCallback } from 'react';
+import React, { useState, useCallback, useMemo } from 'react';
 import Button from './components/Button';
 import ShowCount from './components/ShowCount';
 
@@ -13,10 +13,17 @@ const App = () => {
         setCount2((ps) => ps + 5);
     }, []);
 
+    const isEvenOrOdd = useMemo(() => {
+        let i = 0;
+        while (i < 10000000000) i += 1;
+        return count1 % 2 === 0;
+    }, [count1]);
+
     return (
         <div>
             <h1>This use Callback hooks learning purpose</h1>
             <ShowCount count={count1} title="Counter 1" />
+            <span>{isEvenOrOdd ? 'Even' : 'Odd'}</span>
             <Button handleClick={incrementByOne}>Increment By One!!</Button>
             <hr />
             <ShowCount count={count2} title="Counter 2" />
