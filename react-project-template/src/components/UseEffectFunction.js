@@ -21,7 +21,6 @@ const UseEffectFunction = () => {
     };
 
     const tick = () => {
-        console.log('Clock is running');
         setDate(new Date());
     };
     return (
