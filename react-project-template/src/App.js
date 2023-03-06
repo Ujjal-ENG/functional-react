@@ -1,18 +1,26 @@
-import React, { useState } from 'react';
-import Counter from './components/Counter';
-import UseEffectClass from './components/UseEffectClass';
-import UseEffectFunction from './components/UseEffectFunction';
+import React, { useState, useCallback } from 'react';
+import Button from './components/Button';
+import ShowCount from './components/ShowCount';
 
 const App = () => {
-    const [show, setShow] = useState(true);
+    const [count1, setCount1] = useState(0);
+    const [count2, setCount2] = useState(0);
+
+    const incrementByOne = useCallback(() => {
+        setCount1((ps) => ps + 1);
+    }, []);
+    const incrementByFive = useCallback(() => {
+        setCount2((ps) => ps + 5);
+    }, []);
+
     return (
         <div>
-            {show && <UseEffectFunction />}
-            <p>
-                <button type="button" onClick={() => setShow((ps) => !ps)}>
-                    {show ? 'Button Show' : 'Button Hide'}
-                </button>
-            </p>
+            <h1>This use Callback hooks learning purpose</h1>
+            <ShowCount count={count1} title="Counter 1" />
+            <Button handleClick={incrementByOne}>Increment By One!!</Button>
+            <hr />
+            <ShowCount count={count2} title="Counter 2" />
+            <Button handleClick={incrementByFive}>Increment By Five!!!</Button>
         </div>
     );
 };
