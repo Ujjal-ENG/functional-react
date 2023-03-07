@@ -1,11 +1,12 @@
 import React from 'react';
 import ComplexUseRedcuer from './components/ComplexUseRedcuer';
+import ComplexUseRedever2 from './components/ComplexUseRedever2';
 import UseReducerCounter from './components/UseReducerCounter';
 
 const App = () => {
     return (
         <div>
-            <ComplexUseRedcuer />
+            <ComplexUseRedever2 />
         </div>
     );
 };
