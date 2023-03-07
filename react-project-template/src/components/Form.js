@@ -11,6 +11,7 @@ const Form = () => {
     return (
         <div>
             <Input ref={inputRef} type="text" placeholder="Enter Something" />
+            <h1>Hello</h1>
         </div>
     );
 };
