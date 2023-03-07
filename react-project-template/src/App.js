@@ -1,12 +1,10 @@
 import React from 'react';
-import ComplexUseRedcuer from './components/ComplexUseRedcuer';
-import ComplexUseRedever2 from './components/ComplexUseRedever2';
-import UseReducerCounter from './components/UseReducerCounter';
+import GetDataUseReducer from './components/GetDataUseReducer';
 
 const App = () => {
     return (
         <div>
-            <ComplexUseRedever2 />
+            <GetDataUseReducer />
         </div>
     );
 };
