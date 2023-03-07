@@ -1,10 +1,12 @@
 import React from 'react';
-import GetDataUseReducer from './components/GetDataUseReducer';
+import LayoutComponent from './components/LayoutComponent';
+import LayoutComponent2 from './components/LayoutComponent2';
 
 const App = () => {
     return (
         <div>
-            <GetDataUseReducer />
+            <LayoutComponent />
+            <LayoutComponent2 />
         </div>
     );
 };
